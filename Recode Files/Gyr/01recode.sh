@@ -13,4 +13,5 @@
 module load plink/1.90.beta.4.4
 #module load plink/2.00a2.3LM
 
-plink --file cattle__732993variants__27individuals --cow --noweb --recode12
+cp cattle__732993variants__27individuals.ped gyr.ped
+plink --file gyr --cow --noweb --recode12
