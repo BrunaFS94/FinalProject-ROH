@@ -7,7 +7,7 @@
 #SBATCH --partition=mcbstudent
 #SBATCH --qos=mcbstudent
 #SBATCH --mail-type=ALL
-#SBATCH --mail-user=gabriella.dodd@uconn.edu
+#SBATCH --mail-user=first.last@uconn.edu
 
 #plink/1.07
 module load plink/1.90.beta.4.4
