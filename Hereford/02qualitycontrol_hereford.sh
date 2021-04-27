@@ -1,4 +1,4 @@
-
+#!/bin/bash
 #SBATCH --job-name=make_binary
 #SBATCH -n 1
 #SBATCH -N 1
