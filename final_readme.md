@@ -10,7 +10,7 @@ Beginning with Gir check the box labeled “Chip: Illumina BovineHD ; Samples: 2
 Do the same with the Holstein and Hereford files. For Holstein you should select “Chip: Illumina BovineHD ; Samples: 60” and check that you have information from 60 individuals with 732,993 markers. For Hereford you should select “Chip: Illumina BovineHD ; Samples: 35” and check that you have information from 35 individuals with 732,993 markers.
 Once you have all of your files downloaded, you can upload the .map and .ped files for each species to their respective folders on the Xanadu Cluster. 
 Before running any script, your folders should look like this:
-
+```
 Runs of Homozygosity/
 	├── Holstein/
 		├──00map_holstein.sh/
@@ -36,46 +36,46 @@ Runs of Homozygosity/
 		├──03ROH_hereford.sh/
 		├──cattle__732993variants__35individuals.map/
 		├──cattle__732993variants__35individuals.ped/
-
+```
 3. Prepare Files
 
-Each folder should contain the scripts 00map_holstein.sh and map_holstein.R specific to each breed. The .sh file will load R in the cluster and run the R script in the folder. This will create a map file of the form holstein.map that will be formatted for PLINK.
+Each folder should contain the scripts `00map_holstein.sh` and `map_holstein.R` specific to each breed. The .sh file will load R in the cluster and run the R script in the folder. This will create a map file of the form `holstein.map` that will be formatted for PLINK.
 
 
 4. Recode Files
 
-Each folder should contain the file 01recode.sh. This file runs the PLINK software using these options: 
---noweb 		skips the web based check 
---recode12	outputs the new pedigree and map files with half allele coding
+Each folder should contain the file `01recode.sh`. This file runs the PLINK software using these options: 
+`--noweb` 		skips the web based check 
+`--recode12`	outputs the new pedigree and map files with half allele coding
 
-This file creates the files holstein.ped, plink.log, plink.ped, plink.map, and plink.nosex. The plink.nosex file contains the individuals who have an ambiguous sex listed. 
+This file creates the files `holstein.ped, plink.log, plink.ped, plink.map,` and `plink.nosex`. The plink.nosex file contains the individuals who have an ambiguous sex listed. 
 
 5. Quality Control
 
 Each folder should contain the files 02qualitycontrol.sh script which has the following options involved:
---allow-no-sex		does not removed ambiguously sexed animals
---nonfounders 		includes all animals
---autosome 		    indicates that the chromosomes we are inputting are autosomal (non-sex chromosomes)
---mind 0.2 		    maximum per individual missing
---geno 0.05 		  maximum per SNP missing
---maf 0.000001 	  minor allele frequency
---hwe 1e-10 		  Hardy Weinberg Equilibrium p-value (exact)
---missing 		    missing rates
---make-bed 		    make .bed, .fam, .bim files
+`--allow-no-sex`		does not removed ambiguously sexed animals
+`--nonfounders` 		includes all animals
+`--autosome` 		    	indicates that the chromosomes we are inputting are autosomal (non-sex chromosomes)
+`--mind 0.2` 		    	maximum per individual missing
+`--geno 0.05` 		  	maximum per SNP missing
+`--maf 0.000001` 	  	minor allele frequency
+`--hwe 1e-10` 		  	Hardy Weinberg Equilibrium p-value (exact)
+`--missing` 		    	missing rates
+`--make-bed` 		    	make .bed, .fam, .bim files
 
-This file will filter our plink files to perform quality control. The file will output seven files with the precursor “plinkQC”: plinkQC.bed, plinkQC.fam, plinkQC.bim, plinkQC.imiss, plinkQC.lmiss, plinkQC.log, and plinkQC.nosex.
+This file will filter our plink files to perform quality control. The file will output seven files with the precursor “plinkQC”: `plinkQC.bed, plinkQC.fam, plinkQC.bim, plinkQC.imiss, plinkQC.lmiss, plinkQC.log,` and `plinkQC.nosex`.
 
 6. Runs of homozygosity
 
-Each folder should contain the files 03ROH.sh script. This file will filter using plink to estimate the number of SNPs, set the runs of homozygosity variables, and perform a ROH search . The file will output five files with the precursor “holstein-ROH”: holstein-ROH.hom, holstein-ROH.hom.indiv, holstein-ROH.hom.summary, holstein-ROH.log, and holstein-ROH.nosex.
+Each folder should contain the files 03ROH.sh script. This file will filter using plink to estimate the number of SNPs, set the runs of homozygosity variables, and perform a ROH search . The file will output five files with the precursor “holstein-ROH”: `holstein-ROH.hom, holstein-ROH.hom.indiv, holstein-ROH.hom.summary, holstein-ROH.log`, and `holstein-ROH.nosex`.
 
 7. Descriptive Statistics
 
-The output files :“holstein-ROH.hom, holstein-ROH.hom.indiv”were uploaded into R and some descriptive statistics were computed in order to characterize the ROH disposition across the samples.
+The output files : `holstein-ROH.hom` and `holstein-ROH.hom.indiv` were uploaded into R and some descriptive statistics were computed in order to characterize the ROH disposition across the samples.
 
 8. Manhattan Plots
 
-The output files “holstein-ROH.hom, holstein-ROH.hom.indiv” are also necessary for generating the Manhattan plots of the distribution of runs of homozygosity in the genomes under analysis, where the X-axis represents the distribution of ROH across the genome, and the Y-axis shows the frequency (%) of overlapping ROH shared among samples. There are many ways to create Manhattan Plots through R, we will utilize the R package qqman and command manhattan().
+The output files `holstein-ROH.hom` and `holstein-ROH.hom.indiv` are also necessary for generating the Manhattan plots of the distribution of runs of homozygosity in the genomes under analysis, where the X-axis represents the distribution of ROH across the genome, and the Y-axis shows the frequency (%) of overlapping ROH shared among samples. There are many ways to create Manhattan Plots through R, we will utilize the R package qqman and command manhattan().
 
 9. Gallo
 
