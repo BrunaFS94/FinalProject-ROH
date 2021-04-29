@@ -45,14 +45,17 @@ Each folder should contain the scripts `00map_holstein.sh` and `map_holstein.R` 
 4. Recode Files
 
 Each folder should contain the file `01recode.sh`. This file runs the PLINK software using these options: 
+```
 --noweb 	skips the web based check 
 --recode12	outputs the new pedigree and map files with half allele coding
+```
 
 This file creates the files `holstein.ped, plink.log, plink.ped, plink.map,` and `plink.nosex`. The plink.nosex file contains the individuals who have an ambiguous sex listed. 
 
 5. Quality Control
 
 Each folder should contain the files 02qualitycontrol.sh script which has the following options involved:
+```
 --allow-no-sex		does not removed ambiguously sexed animals
 --nonfounders 		includes all animals
 --autosome		indicates that the chromosomes we are inputting are autosomal (non-sex chromosomes)
@@ -62,6 +65,7 @@ Each folder should contain the files 02qualitycontrol.sh script which has the fo
 --hwe 1e-10 		Hardy Weinberg Equilibrium p-value (exact)
 --missing 		missing rates
 --make-bed 		make .bed, .fam, .bim files
+```
 
 This file will filter our plink files to perform quality control. The file will output seven files with the precursor “plinkQC”: `plinkQC.bed, plinkQC.fam, plinkQC.bim, plinkQC.imiss, plinkQC.lmiss, plinkQC.log,` and `plinkQC.nosex`.
 
