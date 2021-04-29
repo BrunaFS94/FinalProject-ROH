@@ -12,30 +12,30 @@ Once you have all of your files downloaded, you can upload the .map and .ped fil
 Before running any script, your folders should look like this:
 
 Runs of Homozygosity/
-├── Holstein/
-	├──00map_holstein.sh
-	├──map_holstein.R
-	├──01recode.sh
-├──02quality-control.sh
-├──03ROH.sh
-	├──cattle__732993variants__60individuals.map
-	├──cattle__732993variants__60individuals.ped
-├── Gyr/
-	├──00map_gyr.sh
-	├──map_gyr.R
-	├──01recode_gyr.sh
-├──02qualitycontrol_gyr.sh
-├──03ROH_gyr.sh
-	├──cattle__732993variants__27individuals.map
-	├──cattle__732993variants__27individuals.ped
-└── Hereford/
-	├──00map_hereford.sh
-	├──map_hereford.R
-	├──01recode_hereford.sh
-├──02qualitycontrol_hereford.sh
-├──03ROH_hereford.sh
-	├──cattle__732993variants__35individuals.map
-	├──cattle__732993variants__35individuals.ped
+	├── Holstein/
+		├──00map_holstein.sh/
+		├──map_holstein.R/
+		├──01recode.sh/
+		├──02quality-control.sh/
+		├──03ROH.sh/
+		├──cattle__732993variants__60individuals.map/
+		├──cattle__732993variants__60individuals.ped/
+	├── Gyr/
+		├──00map_gyr.sh/
+		├──map_gyr.R/
+		├──01recode_gyr.sh/
+		├──02qualitycontrol_gyr.sh/
+		├──03ROH_gyr.sh/
+		├──cattle__732993variants__27individuals.map/
+		├──cattle__732993variants__27individuals.ped/
+	└── Hereford/
+		├──00map_hereford.sh/
+		├──map_hereford.R/
+		├──01recode_hereford.sh/
+		├──02qualitycontrol_hereford.sh/
+		├──03ROH_hereford.sh/
+		├──cattle__732993variants__35individuals.map/
+		├──cattle__732993variants__35individuals.ped/
 
 3. Prepare Files
 
