@@ -19,7 +19,7 @@ hom.indiv$f<- (hom.indiv$KB / 2489.37)/1000
 mean_f<- round(mean(hom.indiv$f),3) 
 
 
-# put some them in a table:
+# put them in a table:
 tble <- data.frame( Summaries = c(n_segments, mean.individual.ROH, mean.general.ROH,
                                   mean_f))
 
