@@ -81,7 +81,9 @@ The output files : `holstein-ROH.hom` and `holstein-ROH.hom.indiv` were uploaded
 
 The output files `holstein-ROH.hom` and `holstein-ROH.hom.indiv` are also necessary for generating the Manhattan plots of the distribution of runs of homozygosity in the genomes under analysis, where the X-axis represents the distribution of ROH across the genome, and the Y-axis shows the frequency (%) of overlapping ROH shared among samples. There are many ways to create Manhattan Plots through R, we will utilize the R package qqman and command manhattan().
 
-![Holstein Manhattan Plot](Holstein_ROH_dist.jpeg)
+
+![Holstein_ROH_dist](https://user-images.githubusercontent.com/78565434/117053892-8264d080-ace7-11eb-9a35-0b10a55f3603.jpg)
+
 
 9. Gallo
 
