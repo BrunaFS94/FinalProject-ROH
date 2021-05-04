@@ -81,6 +81,8 @@ The output files : `holstein-ROH.hom` and `holstein-ROH.hom.indiv` were uploaded
 
 The output files `holstein-ROH.hom` and `holstein-ROH.hom.indiv` are also necessary for generating the Manhattan plots of the distribution of runs of homozygosity in the genomes under analysis, where the X-axis represents the distribution of ROH across the genome, and the Y-axis shows the frequency (%) of overlapping ROH shared among samples. There are many ways to create Manhattan Plots through R, we will utilize the R package qqman and command manhattan().
 
+![Holstein Manhattan Plot](Holstein_ROH_dist.jpeg)
+
 9. Gallo
 
 The Genomic Annotation in Livestock for positional candidate LOci (GALLO) is an R package, and was utilized as a tool for the accurate annotation of genes located within candidate regions identified into the most common shared homozygous segments within our samples. The reference file for the Gallo package is linked here: https://cran.r-project.org/web/packages/GALLO/GALLO.pdf 
