@@ -24,5 +24,5 @@ tble <- data.frame( Summaries = c(n_segments, mean.individual.ROH, mean.general.
                                   mean_f))
 
 row.names(tble) <- c("ROH sample number", "Individual ROH length", "Total ROH length",
-                     "Inbreeding coefficients")
+                     "Inbreeding coefficient")
  
