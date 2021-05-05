@@ -113,4 +113,5 @@ Gene set enrichment analyses were performed from input gene lists. It maps genes
 
 Following the previously described workflow, we were able to characterize our samples concerning the homozygous segments. We computed the length of the segments, identified the peaks of ROH for each breed, computed inbreeding coefficients. The ROH disposition across genomes gives us an insight into the demography history, genetic variability, inbreeding status of individuals, and helps us drive future directions on mating schemes.
  We also targeted regions comprising the most shared ROH per breed and identified approximately 50 genes in these regions. Finally, we performed the enrichment analyses detecting statistically significantly enriched terms. 
+ The results indicated high inbreeding levels, especially for the Hereford breed. Enriched terms were associated with several inbreeding depression diseases for Hereford.  The set of genes identified for Holstein and Gyr presented some functional patterns, although they do not seem to be problematic or reveal strong characteristics related to the breeds. 
 
