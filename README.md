@@ -109,4 +109,8 @@ The script with the name gallo_holstein.R (or similar) contains code to format t
 
 Gene set enrichment analyses were performed from input gene lists. It maps genes to known functional information sources and detects statistically significantly enriched terms. The three lists of genes generated through gallo, one from each breed, were used as input (https://biit.cs.ut.ee/gprofiler/gost). The organism selected in the browser options was bos taurus, for the other options the default was maintained. Results would comprehend gene ontology, biological pathways, protein databases and a few more.
 
+11. Discussion
+
+Following the previously described workflow, we were able to characterize our samples concerning the homozygous segments. We computed the length of the segments, identified the peaks of ROH for each breed, computed inbreeding coefficients. The ROH disposition across genomes gives us an insight into the demography history, genetic variability, inbreeding status of individuals, and helps us drive future directions on mating schemes.
+ We also targeted regions comprising the most shared ROH per breed and identified approximately 50 genes in these regions. Finally, we performed the enrichment analyses detecting statistically significantly enriched terms. 
 
